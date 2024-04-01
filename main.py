@@ -9,9 +9,8 @@ import uvicorn
 
 app = FastAPI()
 
-app.include_router(contacts_router, prefix='/api')
 app.include_router(auth_router, prefix='/api')
-
+app.include_router(contacts_router, prefix='/api')
 
 @app.get('/')
 def read_root():
